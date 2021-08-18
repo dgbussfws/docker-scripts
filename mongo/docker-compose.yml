@@ -1,0 +1,11 @@
+version: "2"
+services:
+  mongodb:
+    image: "mongo:4.4.3"
+    ports:
+      - "27017:27017"
+    expose:
+      - 27017
+    volumes:
+      - "/home/open/mymongo:/data/db"
+    command: mongod --bind_ip 0.0.0.0
